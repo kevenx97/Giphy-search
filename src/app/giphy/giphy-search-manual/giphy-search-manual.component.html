@@ -1,0 +1,7 @@
+
+Limit: <input name="limit" [(ngModel)]="limit" type="number">
+Term: <input name="term" [(ngModel)]="term" type="text">
+
+<button (click)="pesquisarGiphy()">Pesquisar</button>  
+
+<giphy-search-list [gifsList]="gifs"></giphy-search-list>
