@@ -1,0 +1,11 @@
+<form #form="ngForm" (ngSubmit)="enviarContato(form)">
+	<label>
+		<span>Nome</span>
+		<input name="nome" type="text" placeholder="Digite seu nome" ngModel minlength="5" required>
+	</label>
+	<label ngModelGroup="contato">
+		<span>Email</span>
+		<input name="email" type="email" email placeholder="Digite seu email" ngModel  required>
+	</label>
+	<button type="submit" [disabled]="form.invalid">ENTRAR</button>
+</form>
